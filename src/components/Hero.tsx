@@ -20,8 +20,27 @@ const Hero = () => {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Content */}
-          <div className="animate-fade-in">
+          {/* Profile Image - Left Side */}
+          <div className="animate-slide-in-left order-2 md:order-1">
+            <div className="relative">
+              <div className="w-full max-w-md mx-auto">
+                <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-purple to-navy p-1">
+                  <img 
+                    src="/lovable-uploads/db7c5721-d700-4d36-a624-791eb8defe2e.png" 
+                    alt="Ijeoma Ifeyinwa Enem" 
+                    className="w-full h-auto object-cover rounded-xl bg-white"
+                  />
+                </div>
+                {/* Floating elements */}
+                <div className="absolute -top-4 -right-4 w-8 h-8 bg-purple rounded-full animate-pulse"></div>
+                <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-purple-light rounded-full animate-pulse delay-700"></div>
+                <div className="absolute top-1/2 -left-8 w-4 h-4 bg-navy rounded-full animate-pulse delay-1000"></div>
+              </div>
+            </div>
+          </div>
+
+          {/* Content - Right Side */}
+          <div className="animate-fade-in order-1 md:order-2">
             <p className="text-purple-light text-lg font-medium mb-4 uppercase tracking-wide">
               HELLO!
             </p>
@@ -44,42 +63,24 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 onClick={() => scrollToSection('#projects')}
-                className="bg-purple hover:bg-purple-light text-white px-8 py-3 text-lg font-medium"
+                className="bg-purple hover:bg-purple-light text-white px-8 py-3 text-lg font-medium transform hover:scale-105 transition-all duration-300"
               >
                 View My Work
               </Button>
               <Button 
                 onClick={() => scrollToSection('#contact')}
                 variant="outline" 
-                className="border-white text-white hover:bg-white hover:text-navy px-8 py-3 text-lg font-medium"
+                className="border-white text-white hover:bg-white hover:text-navy px-8 py-3 text-lg font-medium transform hover:scale-105 transition-all duration-300"
               >
                 Hire Me
               </Button>
               <Button 
                 onClick={() => scrollToSection('#contact')}
                 variant="ghost" 
-                className="text-purple-light hover:text-white hover:bg-purple/20 px-8 py-3 text-lg font-medium"
+                className="text-purple-light hover:text-white hover:bg-purple/20 px-8 py-3 text-lg font-medium transform hover:scale-105 transition-all duration-300"
               >
                 Let's Connect
               </Button>
-            </div>
-          </div>
-
-          {/* Profile Image */}
-          <div className="animate-slide-in-right">
-            <div className="relative">
-              <div className="w-full max-w-md mx-auto">
-                <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-purple to-navy p-1">
-                  <img 
-                    src="/lovable-uploads/cfd3eec8-369c-4632-aae9-c0dfb6913c22.png" 
-                    alt="Ijeoma Ifeyinwa Enem" 
-                    className="w-full h-auto object-cover rounded-xl bg-white"
-                  />
-                </div>
-                {/* Floating elements */}
-                <div className="absolute -top-4 -right-4 w-8 h-8 bg-purple rounded-full animate-pulse"></div>
-                <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-purple-light rounded-full animate-pulse delay-700"></div>
-              </div>
             </div>
           </div>
         </div>
@@ -89,7 +90,7 @@ const Hero = () => {
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <button 
           onClick={() => scrollToSection('#about')}
-          className="text-white/60 hover:text-white transition-colors"
+          className="text-white/60 hover:text-white transition-colors duration-300"
         >
           <ArrowDown size={24} />
         </button>
