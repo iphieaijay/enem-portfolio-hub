@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
@@ -73,7 +72,7 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="section-padding bg-white">
+    <section id="experience" className="section-padding bg-gradient-to-br from-navy/5 to-slate-800/5">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-navy mb-6">
